@@ -1,0 +1,13 @@
+{
+    "builds": [
+      {
+        "src": "api/index.go",
+        "use": "@vercel/go"
+      }
+    ],
+    "routes": [
+      { "src": "/api(/?.*)", "dest": "/api" },
+      { "src": "/nbc-news(/?.*)", "dest": "/api" },
+      { "src": "/(.*)", "dest": "/api" }
+    ]
+  }
